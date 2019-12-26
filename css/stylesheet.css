@@ -2,12 +2,10 @@ body{
   font-family: 'kyokasho_l';
   margin: 0;
 }
-
 h1,h2,h3,h4,p {
   margin: 0;
   padding: 0;
 }
-
 .container{
   width: 980px;
   margin: 0 auto;
@@ -17,6 +15,8 @@ h1,h2,h3,h4,p {
 /* トップ */
 .top1{
   text-align: center;
+  height:800px;
+  width:100%;
 }
 .top1 .title{
   font-size: 27px;
@@ -50,7 +50,10 @@ h1,h2,h3,h4,p {
 
 /* トップ２ */
 .top2{
+  height: 530px;
+  width: 100%;
   background-image: url("../img/test4.jpg");
+  background-size: cover;
   display: flex;
   justify-content: flex-end;
   text-align: center;
@@ -79,12 +82,14 @@ h1,h2,h3,h4,p {
 
 /* トップ３ */
 .top3{
+  height:640px;
+  width: 100%;
   background-image: url("../img/test10.jpg");
   text-align: center;
 }
 .top3 h4{
   font-size: 30px;
-  padding: 100px 0 60px 0;
+  padding: 80px 0 40px 0;
 }
 .top3 p{
   font-size: 16px;
@@ -92,6 +97,7 @@ h1,h2,h3,h4,p {
 }
 .flex3{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 65px;
 }
@@ -127,6 +133,10 @@ margin-bottom:40px;
 
 
 /* トップ６ */
+.top6{
+  height:635px;
+  width: 100%;
+}
 .top6 h3{
   font-size: 27px;
   padding: 80px 0 35px;
@@ -151,6 +161,12 @@ margin-bottom:40px;
 
 
 /* フッター */
+.footer{
+  height:250px;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
 .flex7{
   padding-top: 30px;
   display: flex;
@@ -181,4 +197,65 @@ margin-bottom:40px;
 .flex7-3{
   display: flex;
   justify-content: flex-end;
+}
+
+
+/* レスポンシブ */
+@media(max-width: 1024px){
+  .container{
+    width: 100%;
+  }
+
+
+  /* トップ１ */
+  .top1{ height: 680px; }
+  .top1 .none{ display: none; }
+  /* ↑↑  改行消し */
+  .top1 .title{ font-size: 22px; }
+  .top1 .explain{
+    font-size: 16px;
+    text-align: left;
+    line-height: 27px;
+  }
+
+
+  /* トップ２ */
+  .top2 .none{ display: none; }
+  /* ↑↑  説明文消し */
+  .top2{
+    justify-content: center;
+    height: 300px;
+  }
+  .top2-right{ margin: 0 ; }
+
+
+  /* トップ３ */
+  .top3 .none{ display: none; }
+  /* ↑↑  左から4つ目の画像消し */
+  .top3{ height: 800px; }
+  .flex3{ padding-bottom: 30px; }
+   .img-wrap{
+     width: 50%;
+     text-align: left;
+   }
+
+
+    /* トップ６ */
+    .top6{ height: 900px; }
+    .top6 .container{ width: 90%; }
+    .top6 h3{ text-align: center;}
+    .flex6{ display: block; }
+    .flex6-right{ width: 100%; }
+
+
+    /* フッター */
+    .footer .none{ display: none; }
+    /* ↑↑  右側のaタグ消し */
+    .footer{ height: 300px; }
+    .flex7{ display: block;}
+    .flex7l{
+      width: 100%;
+      text-align: center;
+    }
+    .flex7r{ width: 100%; }
 }
